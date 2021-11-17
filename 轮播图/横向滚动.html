@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #banner {
+            width: 1201px;
+            overflow: hidden;
+        }
+
+        #box {
+            width: 3603px;
+            animation: picFrame 10s infinite 1s alternate;
+            /* overflow: hidden; */
+        }
+
+        #box>img {
+            float: left;
+        }
+
+        @keyframes picFrame {
+            10% {
+                margin-left: -1201px;
+            }
+
+            70% {
+                margin-left: -2402px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="banner">
+        <div id="box">
+            <img src="./img/img1.jpg" alt="">
+            <img src="./img/img2.jpg" alt="">
+            <img src="./img/img3.jpg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
