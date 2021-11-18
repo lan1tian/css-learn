@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS滚动</title>
+    <style type="text/css">
+        a {
+            display: inline-block;
+            width: 50px;
+            text-decoration: none;
+        }
+
+        nav,
+        main {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        nav {
+            width: 339px;
+            padding: 5px;
+            display: none;
+            border: 1px solid black;
+            position: sticky;
+            top: 0;
+        }
+
+        main {
+            display: block;
+            width: 350px;
+            height: 200px;
+            overflow-y: hidden;
+            scroll-behavior: smooth;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            font-size: 5em;
+        }
+    </style>
+
+    <script>
+        let idx = 0;
+
+        const locaArray = [1, 2, 3, 4, 5, 4, 3, 2, 1]
+
+        function scroll() {
+            const id = idx % 8 + 1;
+            idx++;
+            const cur = locaArray[id];
+            console.log(id, cur);
+            document.getElementById('a' + cur).click();
+        }
+
+        setInterval(() => {
+            scroll();
+        }, 2000);
+
+    </script>
+
+
+
+</head>
+
+<body>
+    <nav>
+        <a id="a1" href="#page-1">1</a>
+        <a id="a2" href="#page-2">2</a>
+        <a id="a3" href="#page-3">3</a>
+        <a id="a4" href="#page-4">4</a>
+        <a id="a5" href="#page-5">5</a>
+    </nav>
+    <main>
+        <div id="page-1">1</div>
+        <div id="page-2">2</div>
+        <div id="page-3">3</div>
+        <div id="page-4">4</div>
+        <div id="page-5">5</div>
+    </main>
+</body>
+
+</html>

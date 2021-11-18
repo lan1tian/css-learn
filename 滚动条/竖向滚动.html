@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .banner {
+            height: 50px;
+            width: 150px;
+            overflow: hidden;
+        }
+
+        .box {
+            height: 50px;
+            width: 450px;
+            animation: picFrame 6s infinite 0s ease alternate;
+        }
+
+        .card {
+            height: 50px;
+            width: 150px;
+            border: 1px solid black;
+        }
+
+        @keyframes picFrame {
+
+            50% {
+                margin-top: -50px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="banner">
+        <div class="box">
+            <div class="card">test1</div>
+            <div class="card">test2</div>
+        </div>
+    </div>
+</body>
+
+</html>
