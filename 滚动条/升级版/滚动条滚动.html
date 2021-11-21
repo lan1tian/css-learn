@@ -12,14 +12,14 @@
             text-decoration: none;
         }
 
-        nav,
-        main {
+        .nav,
+        .main {
             display: block;
             margin: 0 auto;
             text-align: center;
         }
 
-        nav {
+        .nav {
             width: 339px;
             padding: 5px;
             display: none;
@@ -28,7 +28,7 @@
             top: 0;
         }
 
-        main {
+        .main {
             display: block;
             width: 350px;
             height: 200px;
@@ -41,7 +41,7 @@
             align-items: center;
             justify-content: center;
             height: 100%;
-            font-size: 5em;
+            font-size: 50px;
         }
     </style>
 
@@ -69,20 +69,20 @@
 </head>
 
 <body>
-    <nav>
+    <div class="nav">
         <a id="a1" href="#page-1">1</a>
         <a id="a2" href="#page-2">2</a>
         <a id="a3" href="#page-3">3</a>
         <a id="a4" href="#page-4">4</a>
         <a id="a5" href="#page-5">5</a>
-    </nav>
-    <main>
+    </div>
+    <div class="main">
         <div id="page-1">1</div>
         <div id="page-2">2</div>
         <div id="page-3">3</div>
         <div id="page-4">4</div>
         <div id="page-5">5</div>
-    </main>
+    </div>
 </body>
 
 </html>
