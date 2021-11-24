@@ -1,0 +1,73 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: #f5f5f5;
+}
+
+#layout{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#top{
+    width: 100%;
+    flex: 0 0 50px;
+    margin: 0 auto;
+    background-color: yellow;
+    /* height: 50px; */
+}
+
+#main{
+    flex: 0 0 100%;
+    /* 默认主轴方向为x轴 */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#main div:first-child{
+    /* 宽度为10% */
+    flex: 0 0 100%;
+    background-color: #f5f5f5;
+    /* 把列表的点去掉 */
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    border-left: 1px solid white;
+    /* 设置交叉轴的排列方式 */
+    align-content: flex-start;
+}
+
+#main div:first-child li{
+    flex: 0 0 30%;
+    height: 30px;
+    /* 设置行高 */
+    line-height: 30px;
+    text-align: center;
+    border-bottom: 1px solid white;
+    background-color: green;
+}
+
+#main div:nth-child(2){
+        /* 宽度为10% */
+        flex: 0 0 100%;
+        background-color: #f5f5f5;
+        /* 把列表的点去掉 */
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+}
+
+#main div:nth-child(2) li{
+    flex: 0 0 30%;
+    height: 120px;
+    text-align: center;
+    border-bottom: 1px solid white;
+    margin-top: 10px;
+    background-color: yellow;
+}
+
+
+

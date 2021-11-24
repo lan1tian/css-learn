@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>瀑布流</title>
+    <style>
+        #box {
+            display: flex;
+
+        }
+
+        #box div {
+            height: 100px;
+        }
+
+        #box div:first-child {
+            background-color: yellow;
+            flex: 0 0 50px;
+        }
+
+        #box div:nth-child(2) {
+            background-color: red;
+            flex: 1 1 auto;
+        }
+
+        #box div:nth-child(3) {
+            background-color: yellow;
+            flex: 0 0 50px;
+        }
+
+        @media (min-device-width:400px) and (max-device-width:500px) {
+            #box div:nth-child(2) {
+                background-color: blue;
+                flex: 1 1 auto;
+            }
+        }
+
+        @media (min-device-width:501px)  {
+            #box div:nth-child(2) {
+            background-color: green;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>

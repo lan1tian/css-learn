@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        const c = () => {
+            let w = document.documentElement.clientWidth;
+            let n = (20 * (w / 320) > 40 ? 40 : 20 * (w / 320)) + "px";
+            document.documentElement.style.fontSize = n;
+            console.log("width:" + n);
+        }
+
+        window.addEventListener("load", c);
+        window.addEventListener("resize", c);
+
+    </script>
+
+    <style>
+        html {
+            font-size: 16px;
+        }
+
+        div {
+            /* 相当于16px */
+            /* em相对于父级字体大小，计算时候过于复杂 */
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div>123</div>
+</body>
+
+</html>
