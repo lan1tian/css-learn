@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box {
+            width: 250px;
+            display: flex;
+            border: 1px solid #dcdcdc;
+        }
+
+        #box label{
+            /* 允许扩大缩小 */
+            flex: 1 ;
+            background-color: #f5f5f5;
+            font-family: "楷体";
+            text-align: center;
+        }
+
+        #box label:nth-child(2){
+            flex: 0 0 30px;
+        }
+
+        #box input{
+            border: none;
+            /* 无外边框 */
+            outline: none;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+    <div id="box">
+        <label>姓名</label>
+        <input type="text" />
+        <label>go</label>
+    </div>
+</body>
+
+</html>

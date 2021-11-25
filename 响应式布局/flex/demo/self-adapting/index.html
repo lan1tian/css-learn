@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        const redirect = () => {
+            const userAgent = navigator.userAgent.toLowerCase();
+            // 根据设备进行跳转
+            const device = /ipad|iphone|midp|rv:1.2.3.4|ucweb|android|windows ce/;
+            if (device.test(userAgent)) {
+                window.location.href = "mobile.html";
+            } else {
+                window.location.href = "pc.html";
+            }
+        }
+
+        redirect();
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

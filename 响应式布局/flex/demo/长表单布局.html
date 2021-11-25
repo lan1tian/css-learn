@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        #form{
+            display: flex;
+            flex-direction: column;
+        }
+
+        #form div {
+            display: flex;
+            /* 使用margin */
+            /* margin-top: 10px; */
+            /* height: 30px; */
+            /* 默认自适应 */
+            /* align-items: stretch; */
+            align-items: flex-start;
+            flex: 0 0 30px;
+        }
+
+        #form div label {
+            flex: 0 0 140px;
+            text-align: right;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form>
+        <div id="form">
+            <div>
+                <label>姓名：</label>
+                <input type="text" />
+            </div>
+            <div>
+                <label>请输入密码：</label>
+                <input type="text" />
+            </div>
+            <div>
+                <label>请再次输入密码：</label>
+                <input type="text" />
+            </div>
+        </div>
+    </form>
+
+</body>
+
+</html>
