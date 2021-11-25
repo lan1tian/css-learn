@@ -6,72 +6,72 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>媒体查询</title>
     <style>
-        #div0 {
+        #box {
             width: 100%;
             height: 500px;
         }
 
-        #div0 div {
+        #box div {
             float: left;
             height: 200px;
         }
 
         /* 1行3个div */
         @media screen and (min-device-width:400px) {
-            #div0 div {
+            #box div {
                 width: 33.3%;
             }
 
-            /* div0中的第一个div */
-            #div0 div:nth-child(1) {
+            /* box中的第一个div */
+            #box div:nth-child(1) {
                 background-color: red;
             }
 
-            #div0 div:nth-child(2) {
+            #box div:nth-child(2) {
                 background-color: blue;
             }
 
-            #div0 div:nth-child(3) {
+            #box div:nth-child(3) {
                 background-color: green;
             }
         }
 
         /* 2行3个div */
         @media screen and (min-device-width:300px) and (max-device-width:399px) {
-            #div0 div {
+            #box div {
                 width: 50%;
             }
 
-            /* div0中的第一个div */
-            #div0 div:nth-child(1) {
+            /* box中的第一个div */
+            #box div:nth-child(1) {
                 background-color: red;
             }
 
-            #div0 div:nth-child(2) {
+            #box div:nth-child(2) {
                 background-color: blue;
             }
 
-            #div0 div:nth-child(3) {
+            #box div:nth-child(3) {
                 background-color: green;
             }
         }
 
         /* 3行3个div */
         @media screen and (min-device-width:200px) and (max-device-width:299px) {
-            #div0 div {
+            #box div {
                 width: 100%;
             }
 
-            /* div0中的第一个div */
-            #div0 div:nth-child(1) {
+            /* box中的第一个div */
+            #box div:nth-child(1) {
                 background-color: red;
             }
 
-            #div0 div:nth-child(2) {
+            #box div:nth-child(2) {
                 background-color: blue;
             }
 
-            #div0 div:nth-child(3) {
+            #box div:nth-child(3) {
                 background-color: green;
             }
         }
@@ -79,7 +79,7 @@
 </head>
 
 <body>
-    <div id="div0">
+    <div id="box">
         <div></div>
         <div></div>
         <div></div>
