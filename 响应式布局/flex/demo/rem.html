@@ -10,9 +10,10 @@
     <script>
         const c = () => {
             let w = document.documentElement.clientWidth;
-            let n = (20 * (w / 320) > 40 ? 40 : 20 * (w / 320)) + "px";
-            document.documentElement.style.fontSize = n;
-            console.log("width:" + n);
+            const sizeTmp = 20 * (w / 320);
+            const fontsize = (sizeTmp > 40 ? 40 : sizeTmp) + "px";
+            document.documentElement.style.fontSize = fontsize;
+            console.log("width:" + fontsize);
         }
 
         window.addEventListener("load", c);
