@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <style>
+        body {
+            height: 100vh;
+            background: linear-gradient(#141e30, #243b55);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            color: #03e9f4;
+        }
+
+        .loginbox {
+            width: 400px;
+            height: 460px;
+            background-color: #0c1622;
+
+        }
+
+        .loginbox h2 {
+            text-align: center;
+            color: aliceblue;
+        }
+
+        .form {
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form div {
+            display: flex;
+            /* align-items: flex-start; */
+            flex: 0 0 30px;
+            height: 50px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .form div label {
+            flex: 0 0 20%;
+            text-align: right;
+        }
+
+        .form div input {
+            flex: 0 0 70%;
+            text-align: right;
+            outline: none;
+        }
+
+        .form div input:focus {
+            outline: none;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="loginbox">
+        <h2>登录</h2>
+        <form class="form">
+            <div>
+                <label>账号：</label>
+                <input type="text" />
+            </div>
+            <div>
+                <label>密码：</label>
+                <input type="text" />
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
