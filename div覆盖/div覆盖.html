@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div覆盖</title>
+    <style>
+        #parent {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: cadetblue;
+        }
+
+        #son1 {
+            position: absolute;
+            z-index: 1;
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+        }
+
+        #son2 {
+            position: absolute;
+            z-index: 1;
+            width: 100px;
+            height: 100px;
+            background-color: lightgreen;
+        }
+
+        div:hover {
+            background-color: black;
+        }
+        
+    </style>
+
+    <!-- <script>
+        const parent = document.getElementById("parent");
+        const son = document.getElementById("son1");
+
+    </script> -->
+
+</head>
+
+<body>
+
+    <div id="parent">
+        <div id="son1">
+        </div>
+    </div>
+
+    <!-- 如果使用className的方式，需要把js放在div下面 -->
+    <!-- <script>
+        const parent = document.getElementsByClassName("parent");
+        const son = document.getElementsByClassName("son1");
+        console.log(parent[0]);
+        console.log(son[0]);
+    </script> -->
+
+</body>
+
+</html>
