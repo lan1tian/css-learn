@@ -6,12 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>小米</title>
+    <link rel="icon" href="images/favicon.ico">
+    <!-- 全局样式 -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="css/iconfont.css">
     <style>
         .ad-img {
             width: 100%;
             height: 120px;
             background: url('images/3c6c452e61ff2891921110c296cad09a.jpg') center no-repeat;
-            background: auto 120px;
+            background-size: auto 120px;
         }
 
         .black-nav {
@@ -20,6 +25,20 @@
             line-height: 40px;
             background-color: #333;
             position: relative;
+        }
+
+        .black-nav a {
+            color: #b0b0b0;
+            font-size: 12px;
+        }
+
+        .black-nav li {
+            float: left;
+        }
+
+        .black-nav span {
+            color: #424242;
+
         }
 
         .wrap {
@@ -31,10 +50,61 @@
             float: left;
         }
 
-        .nav-left li{
+        .nav-left li {
             float: left;
+            position: relative;
         }
 
+        .download {
+            width: 124px;
+            /* 初始高度设置为0，将其隐藏 */
+            height: 0px;
+            background-color: #fff;
+            box-shadow: 0 1px 5px #aaa;
+            overflow: hidden;
+            position: absolute;
+            top: 40px;
+            /* 和父元素水平居中  先移动父元素的一半  子元素再往回走自己宽度的一半 */
+            left: 50%;
+            margin-left: -62px;
+            transition: all .3s;
+        }
+
+
+
+        .nav-left li:hover>.download {
+            height: 148px;
+        }
+
+        .download>img {
+            width: 90px;
+            margin: 18px 0 12px;
+        }
+
+        .download>p {
+            color: #333;
+            font-size: 14px;
+            line-height: 14px;
+        }
+
+        .sanjiao {
+            width: 0;
+            height: 0;
+            /* 绘制向上的三角形  需要下边框   两侧的边框设置为透明*/
+            border-bottom: 8px solid #fff;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            position: absolute;
+            bottom: 0px;
+            /* 和父元素垂直居中 */
+            left: 50%;
+            margin-left: -8px;
+            display: none;
+        }
+
+        .nav-left li:hover>.sanjiao {
+            display: block;
+        }
     </style>
 </head>
 
@@ -55,13 +125,22 @@
                 <li><a href="#">企业团购</a><span>|</span></li>
                 <li><a href="#">资质证照</a><span>|</span></li>
                 <li><a href="#">协议规则</a><span>|</span></li>
+                <li>
+                    <a href="#">下载APP</a><span>|</span>
+                    <div class="download">
+                        <img src="images/download.png" />
+                        <p>小米商城APP</p>
+                    </div>
+                    <div class="sanjiao"></div>
+                </li>
+                <li><a href="#">SelectLocation</a><span>|</span></li>
             </ul>
-            <ul class="nav-right">
+            <!-- <ul class="nav-right">
                 <li><a href="#">登录</a><span>|</span></li>
                 <li><a href="#">注册</a><span>|</span></li>
                 <li><a href="#">消息通知</a><span>|</span></li>
 
-            </ul>
+            </ul> -->
         </div>
     </div>
 
