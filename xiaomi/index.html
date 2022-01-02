@@ -105,6 +105,25 @@
         .nav-left li:hover>.sanjiao {
             display: block;
         }
+
+        .nav-right {
+            float: right;
+        }
+
+        .cart-list {
+            width: 316px;
+            height: 0px;
+            background-color: #fff;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+            /* top: 40px; */
+            position: absolute;
+        }
+
+        .cart:hover>.cart-list {
+            height: 100px;
+            line-height: 100px;
+        }
     </style>
 </head>
 
@@ -135,12 +154,15 @@
                 </li>
                 <li><a href="#">SelectLocation</a><span>|</span></li>
             </ul>
-            <!-- <ul class="nav-right">
+            <ul class="nav-right">
                 <li><a href="#">登录</a><span>|</span></li>
                 <li><a href="#">注册</a><span>|</span></li>
                 <li><a href="#">消息通知</a><span>|</span></li>
-
-            </ul> -->
+                <li class="cart">
+                    <a href="#"><i class="iconfont">&#xe607;</i>购物车(0)</a>
+                    <div class="cart-list">购物车中没有商品赶紧选购吧</div>
+                </li>
+            </ul>
         </div>
     </div>
 
