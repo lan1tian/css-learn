@@ -110,23 +110,23 @@
             float: right;
         }
 
-        .cart{
+        .cart {
             width: 120px;
             height: 40px;
             margin-left: 25px;
             background-color: #424242;
-            /* position: relative; */
+            position: relative;
         }
 
         .cart>a {
             display: block;
             width: 120px;
             height: 40px;
-            /* position: relative;
-             */
+            /* position: relative; */
+
         }
 
-        .cart i{
+        .cart i {
             margin-right: 4px;
         }
 
@@ -142,12 +142,221 @@
             right: 0px;
             position: absolute;
             transition: all .3s;
+            z-index: 999;
         }
 
         .cart:hover>.cart-list {
             height: 100px;
             line-height: 100px;
         }
+
+        .white-nav {
+            width: 100%;
+            height: 100px;
+            background-color: #fff;
+            clear: both;
+            position: relative;
+        }
+
+        .logo {
+            width: 234px;
+            height: 100px;
+            float: left;
+        }
+
+        .logo-img {
+            position: absolute;
+        }
+
+        .logo-box {
+            width: 55px;
+            height: 55px;
+            margin-top: 22.5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all .2s;
+        }
+
+        .home {
+            position: absolute;
+            top: 0px;
+            left: -55px;
+            transition: all .2s;
+        }
+
+        .logo-box:hover .home {
+            left: 0;
+        }
+
+        .logo-box:hover .logo-img {
+            left: 55px;
+        }
+
+        .nav-bar {
+            width: 696px;
+            height: 100px;
+            float: left;
+        }
+
+        .nav-bar>ul>li {
+            float: left;
+            padding: 38px 10px;
+            cursor: pointer;
+        }
+
+
+        .nav-bar a {
+            color: #333;
+        }
+
+        .nav-bar a:hover {
+            color: #ff6700;
+        }
+
+        .nav-list {
+            width: 100%;
+            height: 229px;
+            display: none;
+            background-color: #fff;
+            border-top: 1px solid #e0e0e0;
+            box-shadow: 0 3px 4px rgba(0, 0, 0, .18);
+            position: absolute;
+            left: 0px;
+            top: 100px;
+            display: none;
+        }
+
+        .nav-list li {
+            width: 204px;
+            height: 201px;
+            float: left;
+            padding-top: 35px;
+            /* box-sizing: border-box; */
+        }
+
+        .nav-bar li:hover>.nav-list {
+            display: block;
+        }
+
+        .img-box {
+            width: 100%;
+            height: 110px;
+            border-right: 1px solid #e0e0e0;
+            margin-bottom: 20px;
+            /* box-sizing: border-box; */
+        }
+
+        .nav-name {
+            color: #333;
+            font-size: 12px;
+            line-height: 20px;
+        }
+
+        .nav-price {
+            color: #ff6700;
+            font-size: 12px;
+            line-height: 20px;
+        }
+
+        .search {
+            float: left;
+            height: 100px;
+            width: 296px;
+            position: relative;
+            padding-top: 25px;
+        }
+
+        .search input {
+            width: 244px;
+            height: 50px;
+            border: 1px solid #e0e0e0;
+            padding: 0 10px;
+            box-sizing: border-box;
+            outline: none;
+            transition: all .2s;
+            float: left;
+        }
+
+        .search button {
+            float: left;
+            width: 52px;
+            height: 50px;
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            font-size: 24px;
+            color: #616161;
+            outline: none;
+        }
+
+        .search input:hover {
+            border-color: #b0b0b0;
+        }
+
+        .search input:focus {
+            border-color: #ff6700;
+        }
+
+        .hot-words {
+            width: 190px;
+            height: 21px;
+            position: absolute;
+            right: 62px;
+            top: 39.5px;
+        }
+
+        .hot-words>a {
+            display: inline-block;
+            margin-left: 5px;
+            padding: 0 5px;
+            font-size: 12px;
+            background-color: #eee;
+            color: #757575;
+            transition: all .2s;
+        }
+
+
+        .hot-list{
+            width: 244px;
+            height: 0px;
+            border: 1px solid #ff6700;
+            border-top: none;
+            border-bottom: none;
+            position: absolute;
+            top:75px;
+            box-sizing: border-box;
+            transition: all .3s;
+            overflow: hidden;
+        }
+
+        .search input:focus~.hot-list{
+            height: 150px;
+            display: block;
+            border-bottom: 1px solid #ff6700;
+        }
+
+        .search input:focus~.hot-words{
+            display: none;
+        }
+
+        .hot-list a{
+            display: block;
+            height: 30px;
+            font-size: 16px;
+            color: #333;
+            text-align: left;
+            padding: 0 5px;
+        }
+
+        .hot-list a:hover{
+            background: lightgray;
+        }
+
     </style>
 </head>
 
@@ -189,6 +398,164 @@
             </ul>
         </div>
     </div>
+
+    <div class="white-nav">
+        <div class="wrap">
+            <div class="logo">
+                <div class="logo-box">
+                    <a href="#">
+                        <img src="images/logo-footer.png" class="logo-img" />
+                        <img src="images/logo.png" class="home" />
+                    </a>
+                </div>
+            </div>
+            <div class="nav-bar">
+                <ul>
+                    <li>
+                        <a href="#">小米手机</a>
+                        <div class="nav-list">
+                            <div class="wrap">
+                                <ul>
+                                    <li>
+                                        <div class="img-box">
+                                            <img src="images/82ddffd7562c54f9166fa876c143ff22.webp" />
+                                        </div>
+                                        <p class="nav-name">小米10 Pro</p>
+                                        <p class="nav-price">4999元起</p>
+                                    </li>
+                                    <li>
+                                        <div class="img-box">
+                                            <img src="images/82ddffd7562c54f9166fa876c143ff22.webp" />
+                                        </div>
+                                        <p class="nav-name">小米10 Pro</p>
+                                        <p class="nav-price">4999元起</p>
+                                    </li>
+                                    <li>
+                                        <div class="img-box">
+                                            <img src="images/82ddffd7562c54f9166fa876c143ff22.webp" />
+                                        </div>
+                                        <p class="nav-name">小米10 Pro</p>
+                                        <p class="nav-price">4999元起</p>
+                                    </li>
+                                    <li>
+                                        <div class="img-box">
+                                            <img src="images/82ddffd7562c54f9166fa876c143ff22.webp" />
+                                        </div>
+                                        <p class="nav-name">小米10 Pro</p>
+                                        <p class="nav-price">4999元起</p>
+                                    </li>
+                                    <li>
+                                        <div class="img-box">
+                                            <img src="images/82ddffd7562c54f9166fa876c143ff22.webp" />
+                                        </div>
+                                        <p class="nav-name">小米10 Pro</p>
+                                        <p class="nav-price">4999元起</p>
+                                    </li>
+                                    <li>
+                                        <div class="img-box">
+                                            <img src="images/82ddffd7562c54f9166fa876c143ff22.webp" />
+                                        </div>
+                                        <p class="nav-name">小米10 Pro</p>
+                                        <p class="nav-price">4999元起</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Redmi红米</a>
+                        <div class="nav-list">
+                            <div class="wrap">
+                                <ul>
+                                    <li>
+                                        <div class="img-box">
+                                            <img src="images/cff2977b8aab1e43b94b2f00083f4ae1.webp" />
+                                        </div>
+                                        <p class="nav-name">红米10</p>
+                                        <p class="nav-price">3999元起</p>
+                                    </li>
+                                    <li>
+                                        <div class="img-box">
+                                            <img src="images/cff2977b8aab1e43b94b2f00083f4ae1.webp" />
+                                        </div>
+                                        <p class="nav-name">红米10</p>
+                                        <p class="nav-price">3999元起</p>
+                                    </li>
+                                    <li>
+                                        <div class="img-box">
+                                            <img src="images/cff2977b8aab1e43b94b2f00083f4ae1.webp" />
+                                        </div>
+                                        <p class="nav-name">红米10</p>
+                                        <p class="nav-price">3999元起</p>
+                                    </li>
+                                    <li>
+                                        <div class="img-box">
+                                            <img src="images/cff2977b8aab1e43b94b2f00083f4ae1.webp" />
+                                        </div>
+                                        <p class="nav-name">红米10</p>
+                                        <p class="nav-price">3999元起</p>
+                                    </li>
+                                    <li>
+                                        <div class="img-box">
+                                            <img src="images/cff2977b8aab1e43b94b2f00083f4ae1.webp" />
+                                        </div>
+                                        <p class="nav-name">红米10</p>
+                                        <p class="nav-price">3999元起</p>
+                                    </li>
+                                    <li>
+                                        <div class="img-box">
+                                            <img src="images/cff2977b8aab1e43b94b2f00083f4ae1.webp" />
+                                        </div>
+                                        <p class="nav-name">红米10</p>
+                                        <p class="nav-price">3999元起</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">电视</a>
+                    </li>
+                    <li>
+                        <a href="#">笔记本</a>
+                    </li>
+                    <li>
+                        <a href="#">家电</a>
+                    </li>
+                    <li>
+                        <a href="#">路由器</a>
+                    </li>
+                    <li>
+                        <a href="#">智能硬件</a>
+                    </li>
+                    <li>
+                        <a href="#">服务</a>
+                    </li>
+                    <li>
+                        <a href="#">社区</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="search">
+                <form action="">
+                    <input type="text">
+                    <button class="iconfont">&#xe63d;</button>
+                    <div class="hot-words">
+                        <a href="#">小米9 Pro 5G</a>
+                        <a href="#">Redmi Note 8</a>
+                    </div>
+                    <div class="hot-list">
+                        <a href="#">小米9 Pro 5G</a>
+                        <a href="#">Redmi Note 8</a>
+                        <a href="#">小米运动会</a>
+                        <a href="#">小米运动会</a>
+                        <a href="#">小米运动会</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
 
 </body>
 
