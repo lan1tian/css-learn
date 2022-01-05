@@ -10,7 +10,7 @@
 
 <body>
     <div id="app">
-        <h1>Hello App!</h1>
+        <h1>HelloWorld</h1>
         <p>
             <router-link to="/foo">Go to Foo</router-link>
             <router-link to="/bar">Go to Bar</router-link>
@@ -26,11 +26,38 @@
     </div>
 
     <script>
-        const Foo = { template: '<div>foo</div>' }
-        const Bar = { template: '<div>bar</div>' }
+        const Foo = {
+            template: '<div>foo</div>',
+            mounted() {
+                console.log('Foo mounted');
+            },
+
+            activated() {
+                console.log('Foo activated');
+            },
+
+            deactivated() {
+                console.log('Foo deactivated');
+            }
+
+        }
+        const Bar = {
+            template: '<div>bar</div>',
+            mounted() {
+                console.log('Bar mounted');
+            },
+
+            activated() {
+                console.log('Bar activated');
+            },
+
+            deactivated() {
+                console.log('Bar deactivated');
+            }
+        }
 
         const routes = [
-            { path: '/foo', component: Foo, meta: { keepAlive: true } },
+            { path: '/foo', component: Foo, meta: { keepAlive: false } },
             { path: '/bar', component: Bar, meta: { keepAlive: true } }
         ]
 
