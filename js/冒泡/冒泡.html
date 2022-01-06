@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冒泡</title>
+
+    <style>
+        #granddad {
+            width: 300px;
+            height: 300px;
+            background-color: lightblue;
+        }
+
+        #parent {
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+        }
+
+        #son {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="granddad">
+        <div id="parent">
+            <div id="son"></div>
+        </div>
+    </div>
+
+
+    <script>
+        var granddad = document.getElementById("granddad");
+        var parent = document.getElementById("parent");
+        var son = document.getElementById("son");
+
+        granddad.onclick = function () {
+            console.log('granddad')
+        };
+
+        parent.onclick = function (e) {
+            console.log('parent')
+            // 阻止事件冒泡
+            if (e && e.stopPropagation) {
+                e.stopPropagation();
+            }
+        };
+
+        son.onclick = function () {
+            console.log('son')
+        };
+
+    </script>
+
+</body>
+
+</html>
