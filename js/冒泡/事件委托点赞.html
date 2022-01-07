@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件委托</title>
+
+    <style>
+        .parent {
+            width: 200px;
+            height: 800px;
+            background-color: yellowgreen;
+        }
+
+        .son {
+            width: 200px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <ul id="parent" class="parent">
+        <li class="son"><button>点赞</button></li>
+        <li class="son"><button>点赞</button></li>
+        <li class="son"><button>点赞</button></li>
+        <li class="son"><button>点赞</button></li>
+        <li class="son"><button>点赞</button></li>
+    </ul>
+
+    <script>
+        var parent = document.getElementById("parent");
+
+        parent.onclick = function (event) {
+            if(event.target.tagName=='BUTTON'){
+                console.log('button click');
+            }
+        };
+
+    </script>
+
+</body>
+
+</html>
