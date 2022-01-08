@@ -321,30 +321,30 @@
         }
 
 
-        .hot-list{
+        .hot-list {
             width: 244px;
             height: 0px;
             border: 1px solid #ff6700;
             border-top: none;
             border-bottom: none;
             position: absolute;
-            top:75px;
+            top: 75px;
             box-sizing: border-box;
             transition: all .3s;
             overflow: hidden;
         }
 
-        .search input:focus~.hot-list{
+        .search input:focus~.hot-list {
             height: 150px;
             display: block;
             border-bottom: 1px solid #ff6700;
         }
 
-        .search input:focus~.hot-words{
+        .search input:focus~.hot-words {
             display: none;
         }
 
-        .hot-list a{
+        .hot-list a {
             display: block;
             height: 30px;
             font-size: 16px;
@@ -353,10 +353,143 @@
             padding: 0 5px;
         }
 
-        .hot-list a:hover{
+        .hot-list a:hover {
             background: lightgray;
         }
 
+        .banner {
+            width: 100%;
+            height: 460px;
+        }
+
+        .banner-box {
+            width: 100%;
+            height: 460px;
+            background-image: url('images/a4aa0cbfad7de34618c4bebdbdeee4e1.jpg');
+            background-size: 100%;
+            animation: banner 25s linear infinite;
+        }
+
+        .banner-box:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes banner {
+            0% {
+                background-image: url('images/a4aa0cbfad7de34618c4bebdbdeee4e1.jpg');
+            }
+
+            25% {
+                background-image: url('images/d988b1a70b90330c6732c1943b3205fb.webp');
+            }
+
+            50% {
+                background-image: url('images/dcb09c80c58dc9d71623c925739a3733.webp');
+            }
+
+            75% {
+                background-image: url('images/6bd4174b8c5aad67a64864a5716ad152.webp');
+            }
+
+            100% {
+                background-image: url('images/755aca9487082e7698e16f17cfb70839.webp');
+            }
+        }
+
+        .slide {
+            width: 234px;
+            height: 420px;
+            padding: 20px 0;
+            background-color: rgba(105, 101, 101, .6);
+            position: relative;
+        }
+
+        .slide>ul>li {
+            height: 42px;
+            line-height: 42px;
+            padding-left: 30px;
+            text-align: left;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .slide>ul>li:hover {
+            background-color: #ff6700;
+        }
+
+        .slide li:hover>.slide-list {
+            display: block;
+        }
+
+        .slide a {
+            color: #fff;
+        }
+
+        .slide i {
+            color: #b0b0b0;
+            float: right;
+            padding-right: 20px;
+        }
+
+        .slide-list {
+            width: 992px;
+            height: 460px;
+            /* border: 1px solid #e0e0e0; */
+            position: absolute;
+            top: 0px;
+            left: 234px;
+            display: none;
+        }
+
+        .slide-list>ul {
+            width: 247.75px;
+            height: 456px;
+            float: left;
+        }
+
+        .slide-list>ul>li {
+            width: 100%;
+            height: 76px;
+            padding: 18px 0 18px 20px;
+            box-sizing: border-box;
+        }
+
+
+        .ad {
+            width: 100%;
+            height: 170px;
+            border: 1px solid black;
+        }
+
+        .ad-aside {
+            width: 234px;
+            height: 170px;
+            background-color: #5f5750;
+            padding: 3px;
+            position: relative;
+        }
+
+        .row::before,
+        .col::after {
+            content: "";
+            background-color: #665e57;
+            display: block;
+            position: absolute;
+        }
+
+        .row::before {
+            width: 64px;
+            height: 1px;
+            bottom: 0;
+            left: 6px;
+        }
+
+        .col::after {
+            width: 1px;
+            height: 70px;
+            right: 0;
+            top: 6px;
+        }
     </style>
 </head>
 
@@ -555,6 +688,273 @@
             </div>
         </div>
     </div>
+
+    <div class="banner">
+        <div class="wrap">
+            <div class="banner-box">
+                <div class="slide">
+                    <ul>
+                        <li>
+                            <a href="#">手机 电话卡</a>
+                            <i class="iconfont">&#xe621;</i>
+                            <div class="slide-list">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/d622e8a81f81caa0f619ee750cf64501.png" alt="">
+                                            <span>小米10 Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/d622e8a81f81caa0f619ee750cf64501.png" alt="">
+                                            <span>小米10 Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/d622e8a81f81caa0f619ee750cf64501.png" alt="">
+                                            <span>小米10 Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/d622e8a81f81caa0f619ee750cf64501.png" alt="">
+                                            <span>小米10 Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/d622e8a81f81caa0f619ee750cf64501.png" alt="">
+                                            <span>小米10 Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/d622e8a81f81caa0f619ee750cf64501.png" alt="">
+                                            <span>小米10 Pro</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/d622e8a81f81caa0f619ee750cf64501.png" alt="">
+                                            <span>小米10 Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/d622e8a81f81caa0f619ee750cf64501.png" alt="">
+                                            <span>小米10 Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/d622e8a81f81caa0f619ee750cf64501.png" alt="">
+                                            <span>小米10 Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/d622e8a81f81caa0f619ee750cf64501.png" alt="">
+                                            <span>小米10 Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/d622e8a81f81caa0f619ee750cf64501.png" alt="">
+                                            <span>小米10 Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/d622e8a81f81caa0f619ee750cf64501.png" alt="">
+                                            <span>小米10 Pro</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/d622e8a81f81caa0f619ee750cf64501.png" alt="">
+                                            <span>小米10 Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/d622e8a81f81caa0f619ee750cf64501.png" alt="">
+                                            <span>小米10 Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/d622e8a81f81caa0f619ee750cf64501.png" alt="">
+                                            <span>小米10 Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/d622e8a81f81caa0f619ee750cf64501.png" alt="">
+                                            <span>小米10 Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/d622e8a81f81caa0f619ee750cf64501.png" alt="">
+                                            <span>小米10 Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/d622e8a81f81caa0f619ee750cf64501.png" alt="">
+                                            <span>小米10 Pro</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/d622e8a81f81caa0f619ee750cf64501.png" alt="">
+                                            <span>小米10 Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/d622e8a81f81caa0f619ee750cf64501.png" alt="">
+                                            <span>小米10 Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/d622e8a81f81caa0f619ee750cf64501.png" alt="">
+                                            <span>小米10 Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/d622e8a81f81caa0f619ee750cf64501.png" alt="">
+                                            <span>小米10 Pro</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">电视 盒子</a>
+                            <i class="iconfont">&#xe621;</i>
+                            <div class="slide-list">
+
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">笔记本 显示器 平板</a>
+                            <i class="iconfont">&#xe621;</i>
+                            <div class="slide-list">
+
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">手机 电话卡</a>
+                            <i class="iconfont">&#xe621;</i>
+                            <div class="slide-list">
+
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">手机 电话卡</a>
+                            <i class="iconfont">&#xe621;</i>
+                            <div class="slide-list">
+
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">手机 电话卡</a>
+                            <i class="iconfont">&#xe621;</i>
+                            <div class="slide-list">
+
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">手机 电话卡</a>
+                            <i class="iconfont">&#xe621;</i>
+                            <div class="slide-list">
+
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">手机 电话卡</a>
+                            <i class="iconfont">&#xe621;</i>
+                            <div class="slide-list">
+
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">手机 电话卡</a>
+                            <i class="iconfont">&#xe621;</i>
+                            <div class="slide-list">
+
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">手机 电话卡</a>
+                            <i class="iconfont">&#xe621;</i>
+                            <div class="slide-list">
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ad">
+        <div class="wrap">
+            <div class="ad-aside">
+                <ul>
+                    <li class="row col">
+                        <a href="#">
+                            <i class="iconfont">&#xe733;</i>
+                            <p>米粉卡</p>
+                        </a>
+                    </li>
+                    <li class="row col">
+                        <a href="#">
+                            <i class="iconfont">&#xe733;</i>
+                            <p>米粉卡</p>
+                        </a>
+                    </li>
+                    <li class="row">
+                        <a href="#">
+                            <i class="iconfont">&#xe733;</i>
+                            <p>米粉卡</p>
+                        </a>
+                    </li>
+                    <li class="col">
+                        <a href="#">
+                            <i class="iconfont">&#xe733;</i>
+                            <p>米粉卡</p>
+                        </a>
+                    </li>
+                    <li class="col">
+                        <a href="#">
+                            <i class="iconfont">&#xe733;</i>
+                            <p>米粉卡</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="iconfont">&#xe733;</i>
+                            <p>米粉卡</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
 
 
 </body>
