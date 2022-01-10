@@ -13,9 +13,9 @@
 <body>
 
     <div id="app">
-        <button onclick="clickButton">新增</button>
+        <button v-on:click="replaceFirstUserByVm">button</button>
         <span v-for="(item,i) in userList">
-            {{item}}
+            {{item.name}}
         </span>
     </div>
 
@@ -24,20 +24,47 @@
             el: "#app",
             data() {
                 return {
-                    userList: ['tom', 'tim', 'spark']
+                    total: 100,
+                    userList: [{ name: 'tom', age: 20 }, { name: 'tim', age: 21 }, { name: 'bob', age: 25 }]
                 }
             },
-            methods:{
-                clickButton(){
-                    this.userList.push('test');
+            methods: {
+                addNew: function () {
+                    console.log('test');
+                    this.userList.push({ name: 'test', age: 22 });
+                },
+                deleteLast: function () {
+                    this.userList.pop();
+                },
+                updateFirstUser: function () {
+                    const user = this.userList[0];
+                    user.name = 'jack';
+                },
+                replaceFirstUser: function () {
+                    console.log('click')
+                    this.userList[0] = { name: 'jack', age: '19' }
+                },
+                replaceFirstUserByVm: function () {
+                    total = 20;
+                    console.log('click')
+                    // 方法一
+                    // vm.$set(vm.userList,0,{ name: 'jack', age: '19' })
+                    // 方法二
+                    // Vue.set(vm.userList, 0, { name: 'jack', age: '19' })
                 }
             },
             watch: {
-                userList: {
-                    handler(newVal, oldVal) {
+                'userList': {
+                    handler: function (newVal, oldVal) {
                         console.log(newVal, oldVal)
                     },
                     deep: true
+                },
+                total: {
+                    handler: function (newVal, oldVal) {
+                        console.log(newVal, oldVal)
+                    },
+                    deep:true
                 }
             }
         })
