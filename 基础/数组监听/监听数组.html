@@ -8,6 +8,8 @@
     <title>watch</title>
     <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
     <script src="https://cdn.staticfile.org/vue-router/2.7.0/vue-router.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script> -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.core.js"></script>
 </head>
 
 <body>
@@ -17,6 +19,7 @@
         <span v-for="(item,i) in userList">
             {{item.name}}
         </span>
+        <!-- <div>{{total}}</div> -->
     </div>
 
     <script>
@@ -25,6 +28,9 @@
             data() {
                 return {
                     total: 100,
+                    val: '',
+                    oldVal: '',
+                    difference: '',
                     userList: [{ name: 'tom', age: 20 }, { name: 'tim', age: 21 }, { name: 'bob', age: 25 }]
                 }
             },
@@ -45,10 +51,9 @@
                     this.userList[0] = { name: 'jack', age: '19' }
                 },
                 replaceFirstUserByVm: function () {
-                    total = 20;
                     console.log('click')
                     // 方法一
-                    // vm.$set(vm.userList,0,{ name: 'jack', age: '19' })
+                    vm.$set(vm.userList,0,{ name: 'jack', age: '19' })
                     // 方法二
                     // Vue.set(vm.userList, 0, { name: 'jack', age: '19' })
                 }
@@ -56,15 +61,14 @@
             watch: {
                 'userList': {
                     handler: function (newVal, oldVal) {
-                        console.log(newVal, oldVal)
+                        console.log(newVal,oldVal)
                     },
                     deep: true
                 },
                 total: {
                     handler: function (newVal, oldVal) {
                         console.log(newVal, oldVal)
-                    },
-                    deep:true
+                    }
                 }
             }
         })
