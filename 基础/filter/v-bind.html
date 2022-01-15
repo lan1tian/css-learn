@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-bind测试</title>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue-router/2.7.0/vue-router.min.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <input v-model="firstName" type="text"></input>
+        <input v-model="secondName" type="text"></input>
+        <div >{{firstName,secondName|nameFormat}}</div>
+    </div>
+
+    <script>
+
+
+        const vm = new Vue({
+            el: "#app",
+            data() {
+                return {
+                    firstName: '',
+                    secondName:''
+                }
+            },
+            methods: {
+
+            },
+            filters: {
+                nameFormat: function (first,second) {
+                    return first.charAt(0).toUpperCase() + first.slice(1)+' '+second.charAt(0).toUpperCase() + second.slice(1)
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>

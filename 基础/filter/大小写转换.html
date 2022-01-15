@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpcaseFilter</title>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue-router/2.7.0/vue-router.min.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <input v-model="inputStr" type="text"></input>
+        <div>{{inputStr|upcaseFilter}}</div>
+    </div>
+
+    <script>
+
+        Vue.filter('upcaseFilter', function (val) {
+            if (!val) {
+                return ''
+            }
+            return val.toString().toUpperCase()
+        })
+
+
+        const vm = new Vue({
+            el: "#app",
+            data() {
+                return {
+                    inputStr:''
+                }
+            },
+            methods: {
+
+            }
+        })
+    </script>
+
+</body>
+
+</html>

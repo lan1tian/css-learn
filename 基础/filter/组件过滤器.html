@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeFilter</title>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue-router/2.7.0/vue-router.min.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <input v-model="name" type="text"></input>
+        <div>{{name|nameFormat}}</div>
+    </div>
+
+    <script>
+
+
+        const vm = new Vue({
+            el: "#app",
+            data() {
+                return {
+                    name: ''
+                }
+            },
+            methods: {
+
+            },
+            filters: {
+                nameFormat: function (val) {
+                    return val.charAt(0).toUpperCase() + val.slice(1)
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>
