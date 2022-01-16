@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue生命周期</title>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue-router/2.7.0/vue-router.min.js"></script>
+</head>
+
+<body>
+
+    <div id="app" >
+        <label>输入框：</label><input type="text" v-model="message"></input>
+        <div>{{message}}</div>
+        <button @click="destroyComponent">销毁组件</button>
+    </div>
+
+
+    <script>
+        const vm = new Vue({
+            el: "#app",
+            data: {
+                message: '请输入内容'
+            },
+            methods: {
+                sayHello() {
+                    console.log('HelloWorld')
+                },
+                destroyComponent() {
+                    console.log('即将销毁组件...')
+                    vm.$destroy()
+                    this.$el.parentNode.removeChild(this.$el);
+                }
+            },
+            beforeCreate() {
+                console.log('即将开始初始化实例...')
+            },
+            created() {
+                console.log('实例初始化完成，调用sayHello方法：');
+                this.sayHello();
+            },
+            mounted() {
+                console.log('挂载完成...')
+            },
+            beforeUpdate() {
+                console.log('即将开始渲染')
+            },
+            updated() {
+                console.log('页面渲染完成')
+            },
+            // 此时还能调用data和methods函数
+            beforeDestroy() {
+                console.log('即将销毁组件...')
+            },
+            destroyed() {
+                console.log('完成了销毁...')
+            }
+        }
+        )
+    </script>
+
+</body>
+
+</html>
