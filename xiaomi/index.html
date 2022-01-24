@@ -458,15 +458,53 @@
         .ad {
             width: 100%;
             height: 170px;
-            border: 1px solid black;
+            /* border: 1px solid black; */
+            margin: 14px 0 26px;
         }
 
         .ad-aside {
             width: 234px;
             height: 170px;
             background-color: #5f5750;
+            box-sizing: border-box;
             padding: 3px;
             position: relative;
+            float: left;
+        }
+
+        .ad-aside li{
+            float: left;
+            width: 76px;
+            height: 48px;
+            opacity: .7;
+            padding: 17px 0;
+            position: relative;
+        }
+
+        .ad-aside a{
+            color: #fff;
+            font-size: 12px;
+        }
+
+        .ad-aside i{
+            display: block;
+            margin-bottom: 4px;
+            font-size: 26px;
+        }
+
+        .ad-aside li:hover{
+            opacity: 1;
+        }
+
+        .ad-box{
+            width: 316px;
+            height: 170px;
+            float: left;
+            margin-left: 14.66px;
+        }
+
+        .ad-box img{
+            width: 100%;
         }
 
         .row::before,
@@ -489,7 +527,7 @@
             height: 70px;
             right: 0;
             top: 6px;
-        }
+        } 
     </style>
 </head>
 
@@ -951,6 +989,21 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+            <div class="ad-box">
+                <a href="#">
+                    <img src="images/7bc54a61b927dd8c54ddd39a0acf0254.jpg">
+                </a>
+            </div>
+            <div class="ad-box">
+                <a href="#">
+                    <img src="images/7bc54a61b927dd8c54ddd39a0acf0254.jpg">
+                </a>
+            </div>
+            <div class="ad-box">
+                <a href="#">
+                    <img src="images/7bc54a61b927dd8c54ddd39a0acf0254.jpg">
+                </a>
             </div>
         </div>
     </div>
