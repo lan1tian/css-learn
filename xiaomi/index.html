@@ -528,6 +528,91 @@
             right: 0;
             top: 6px;
         } 
+
+        .title{
+            height: 58px;
+            line-height: 58px;
+            font-weight: 200;
+            font-size: 22px;
+            text-align: left;
+        }
+
+        .main{
+            width: 100%;
+            background-color: #f5f5f5;
+            padding: 4px 0 12px;
+            overflow: hidden;
+        }
+
+        .items{
+            width: 234px;
+            height: 338px;
+            background-color: #fff;
+            float: left;
+            margin-left: 14px;
+        }
+
+        .items-left{
+            margin-left: 0;
+        }
+
+        .flash-box>div{
+            border-top: 1px solid #e53935;
+        }
+
+        .flash-box>div:nth-child(1)>img{
+            margin: 25px 0;
+        }
+
+        .time{
+            color: #ef3a3b;
+            font-size: 21px;
+            padding-top: 54px;
+        }
+
+        .date{
+            font-size: 15px;
+            color: rgba(0, 0, 0, .54);
+        }
+
+        .name{
+            width: 194px;
+            height: 21px;
+            margin: 0 auto 3px;
+            font-size: 14px;
+            /* 规定p标签段落中的文本不换行 */
+            white-space: nowrap;
+            overflow: hidden;
+            /* 显示省略符号来代表被修剪的文本。 */
+            text-overflow: ellipsis;
+        }
+
+        .desc{
+            width: 194px;
+            height: 18px;
+            margin: 0 auto 12px;
+            font-size: 12px;
+            color: #b0b0b0;
+            white-space: nowrap;
+            
+            text-overflow: ellipsis;
+        }
+
+        .price{
+            font-size: 14px;
+            color: #ff6709;
+        }
+
+        .price>del{
+            color: #b0b0b0;
+        }
+
+        .flash-img{
+            width: 160px;
+            margin: 39px 0 22px;
+        }
+
+
     </style>
 </head>
 
@@ -1008,6 +1093,45 @@
         </div>
     </div>
 
+    <div class="main">
+        <div class="wrap">
+            <div class="flash">
+                <h3 class="title">小米闪购</h3>
+            </div>
+            <div class="flash-box">
+                <div class="items items-left">
+                    <p class="time">14:00 场</p>
+                    <img src="images/flash.png" alt="">
+                    <p class="date">距离结束还有</p>
+                </div>
+                <div class="items">
+                    <img src="images/pms_1560238127.40319869.png" alt="" class="flash-img">
+                    <p class="name">小米手环4 NFC版 黑色</p>
+                    <p class="desc">大屏彩显，可刷公交，门禁</p>
+                    <p class="price">209元 <del>229元</del></p>
+                </div>
+                <div class="items">
+                    <img src="images/pms_1560238127.40319869.png" alt="" class="flash-img">
+                    <p class="name">小米手环4 NFC版 黑色</p>
+                    <p class="desc">大屏彩显，可刷公交，门禁</p>
+                    <p class="price">209元 <del>229元</del></p>
+                </div>
+                <div class="items">
+                    <img src="images/pms_1560238127.40319869.png" alt="" class="flash-img">
+                    <p class="name">小米手环4 NFC版 黑色</p>
+                    <p class="desc">大屏彩显，可刷公交，门禁</p>
+                    <p class="price">209元 <del>229元</del></p>
+                </div>
+                <div class="items">
+                    <img src="images/pms_1560238127.40319869.png" alt="" class="flash-img">
+                    <p class="name">小米手环4 NFC版 黑色</p>
+                    <p class="desc">大屏彩显，可刷公交，门禁</p>
+                    <p class="price">209元 <del>229元</del></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 
 </body>
