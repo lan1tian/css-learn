@@ -472,7 +472,7 @@
             float: left;
         }
 
-        .ad-aside li{
+        .ad-aside li {
             float: left;
             width: 76px;
             height: 48px;
@@ -481,29 +481,29 @@
             position: relative;
         }
 
-        .ad-aside a{
+        .ad-aside a {
             color: #fff;
             font-size: 12px;
         }
 
-        .ad-aside i{
+        .ad-aside i {
             display: block;
             margin-bottom: 4px;
             font-size: 26px;
         }
 
-        .ad-aside li:hover{
+        .ad-aside li:hover {
             opacity: 1;
         }
 
-        .ad-box{
+        .ad-box {
             width: 316px;
             height: 170px;
             float: left;
             margin-left: 14.66px;
         }
 
-        .ad-box img{
+        .ad-box img {
             width: 100%;
         }
 
@@ -527,9 +527,9 @@
             height: 70px;
             right: 0;
             top: 6px;
-        } 
+        }
 
-        .title{
+        .title {
             height: 58px;
             line-height: 58px;
             font-weight: 200;
@@ -537,14 +537,14 @@
             text-align: left;
         }
 
-        .main{
+        .main {
             width: 100%;
             background-color: #f5f5f5;
             padding: 4px 0 12px;
             overflow: hidden;
         }
 
-        .items{
+        .items {
             width: 234px;
             height: 338px;
             background-color: #fff;
@@ -552,30 +552,34 @@
             margin-left: 14px;
         }
 
-        .items-left{
+        .items-left {
             margin-left: 0;
         }
 
-        .flash-box>div{
+        .flash-box>div {
             border-top: 1px solid #e53935;
         }
 
-        .flash-box>div:nth-child(1)>img{
+        .flash-box>div:nth-child(1)>img {
             margin: 25px 0;
         }
 
-        .time{
+        .flash-box {
+            height: 339px;
+        }
+
+        .time {
             color: #ef3a3b;
             font-size: 21px;
             padding-top: 54px;
         }
 
-        .date{
+        .date {
             font-size: 15px;
             color: rgba(0, 0, 0, .54);
         }
 
-        .name{
+        .name {
             width: 194px;
             height: 21px;
             margin: 0 auto 3px;
@@ -587,29 +591,96 @@
             text-overflow: ellipsis;
         }
 
-        .desc{
+        .desc {
             width: 194px;
             height: 18px;
             margin: 0 auto 12px;
             font-size: 12px;
             color: #b0b0b0;
             white-space: nowrap;
-            
+
             text-overflow: ellipsis;
         }
 
-        .price{
+        .price {
             font-size: 14px;
             color: #ff6709;
         }
 
-        .price>del{
+        .price>del {
             color: #b0b0b0;
         }
 
-        .flash-img{
+        .flash-img {
             width: 160px;
             margin: 39px 0 22px;
+        }
+
+        .home-banner-box {
+            width: 100%;
+            height: 120px;
+            margin: 22px 0;
+        }
+
+        .more {
+            float: right;
+            color: #424242;
+            font-size: 16px;
+            transition: all .4s;
+        }
+
+        .more>i {
+            color: #b0b0b0;
+            margin-left: 8px;
+            transition: all .4s;
+        }
+
+        .more:hover {
+            color: #ff6700;
+        }
+
+        .more:hover>i {
+            color: #ff6700;
+        }
+
+        .phone-box-left {
+            width: 234px;
+            height: 614px;
+            float: left;
+            transition: all .2s linear;
+        }
+
+        .name1 {
+            width: 214px;
+            margin-bottom: 2px;
+        }
+
+        .desc1 {
+            width: 214px;
+            margin-bottom: 10px;
+        }
+
+        .items1:hover,.phone-box-left:hover{
+            box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+            transform: translateY(-2px);
+        }
+
+        .phone-box-right{
+            width: 992px;
+            height: 614px;
+            float: left;
+        }
+
+        .phone-box::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .items1{
+            height: 300px;
+            margin-bottom: 14px;
+            transition: all .2s linear;
         }
 
 
@@ -1097,36 +1168,129 @@
         <div class="wrap">
             <div class="flash">
                 <h3 class="title">小米闪购</h3>
+                <div class="flash-box">
+                    <div class="items items-left">
+                        <p class="time">14:00 场</p>
+                        <img src="images/flash.png" alt="">
+                        <p class="date">距离结束还有</p>
+                    </div>
+                    <div class="items">
+                        <img src="images/pms_1560238127.40319869.png" alt="" class="flash-img">
+                        <p class="name">小米手环4 NFC版 黑色</p>
+                        <p class="desc">大屏彩显，可刷公交，门禁</p>
+                        <p class="price">209元 <del>229元</del></p>
+                    </div>
+                    <div class="items">
+                        <img src="images/pms_1560238127.40319869.png" alt="" class="flash-img">
+                        <p class="name">小米手环4 NFC版 黑色</p>
+                        <p class="desc">大屏彩显，可刷公交，门禁</p>
+                        <p class="price">209元 <del>229元</del></p>
+                    </div>
+                    <div class="items">
+                        <img src="images/pms_1560238127.40319869.png" alt="" class="flash-img">
+                        <p class="name">小米手环4 NFC版 黑色</p>
+                        <p class="desc">大屏彩显，可刷公交，门禁</p>
+                        <p class="price">209元 <del>229元</del></p>
+                    </div>
+                    <div class="items">
+                        <img src="images/pms_1560238127.40319869.png" alt="" class="flash-img">
+                        <p class="name">小米手环4 NFC版 黑色</p>
+                        <p class="desc">大屏彩显，可刷公交，门禁</p>
+                        <p class="price">209元 <del>229元</del></p>
+                    </div>
+                </div>
+                <div class="home-banner-box">
+                    <a href="#">
+                        <img src="images/406c0feca62732acbb2893344486895d.webp" alt="">
+                    </a>
+                </div>
             </div>
-            <div class="flash-box">
-                <div class="items items-left">
-                    <p class="time">14:00 场</p>
-                    <img src="images/flash.png" alt="">
-                    <p class="date">距离结束还有</p>
+
+            <div class="phone">
+                <h3 class="title">
+                    手机
+                    <a href="#" class="more">
+                        查看全部
+                        <i class="iconfont">&#xe658;</i>
+                    </a>
+                </h3>
+                <div class="phone-box">
+                    <div class="phone-box-left">
+                        <a href="#">
+                            <img src="images/574c6643ab91c6618bfb2d0e2c761d0b.webp" alt="">
+                        </a>
+                    </div>
+                    <div class="phone-box-right">
+                        <div class="items items1">
+                            <a href="#">
+                                <img src="images/0099822e42b4428cb25c4cdebc6ca53d.webp" alt="" class="goods-img">
+                                <p class="name name1">小米10</p>
+                                <p class="desc desc1">骁龙865/1亿像素相机</p>
+                                <p class="price">3999元起</p>
+                            </a>
+                        </div>
+                        <div class="items items1">
+                            <a href="#">
+                                <img src="images/0099822e42b4428cb25c4cdebc6ca53d.webp" alt="" class="goods-img">
+                                <p class="name name1">小米10</p>
+                                <p class="desc desc1">骁龙865/1亿像素相机</p>
+                                <p class="price">3999元起</p>
+                            </a>
+                        </div>
+                        <div class="items items1">
+                            <a href="#">
+                                <img src="images/0099822e42b4428cb25c4cdebc6ca53d.webp" alt="" class="goods-img">
+                                <p class="name name1">小米10</p>
+                                <p class="desc desc1">骁龙865/1亿像素相机</p>
+                                <p class="price">3999元起</p>
+                            </a>
+                        </div>
+                        <div class="items items1">
+                            <a href="#">
+                                <img src="images/0099822e42b4428cb25c4cdebc6ca53d.webp" alt="" class="goods-img">
+                                <p class="name name1">小米10</p>
+                                <p class="desc desc1">骁龙865/1亿像素相机</p>
+                                <p class="price">3999元起</p>
+                            </a>
+                        </div>
+                        <div class="items items1">
+                            <a href="#">
+                                <img src="images/0099822e42b4428cb25c4cdebc6ca53d.webp" alt="" class="goods-img">
+                                <p class="name name1">小米10</p>
+                                <p class="desc desc1">骁龙865/1亿像素相机</p>
+                                <p class="price">3999元起</p>
+                            </a>
+                        </div>
+                        <div class="items items1">
+                            <a href="#">
+                                <img src="images/0099822e42b4428cb25c4cdebc6ca53d.webp" alt="" class="goods-img">
+                                <p class="name name1">小米10</p>
+                                <p class="desc desc1">骁龙865/1亿像素相机</p>
+                                <p class="price">3999元起</p>
+                            </a>
+                        </div>
+                        <div class="items items1">
+                            <a href="#">
+                                <img src="images/0099822e42b4428cb25c4cdebc6ca53d.webp" alt="" class="goods-img">
+                                <p class="name name1">小米10</p>
+                                <p class="desc desc1">骁龙865/1亿像素相机</p>
+                                <p class="price">3999元起</p>
+                            </a>
+                        </div>
+                        <div class="items items1">
+                            <a href="#">
+                                <img src="images/0099822e42b4428cb25c4cdebc6ca53d.webp" alt="" class="goods-img">
+                                <p class="name name1">小米10</p>
+                                <p class="desc desc1">骁龙865/1亿像素相机</p>
+                                <p class="price">3999元起</p>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="items">
-                    <img src="images/pms_1560238127.40319869.png" alt="" class="flash-img">
-                    <p class="name">小米手环4 NFC版 黑色</p>
-                    <p class="desc">大屏彩显，可刷公交，门禁</p>
-                    <p class="price">209元 <del>229元</del></p>
-                </div>
-                <div class="items">
-                    <img src="images/pms_1560238127.40319869.png" alt="" class="flash-img">
-                    <p class="name">小米手环4 NFC版 黑色</p>
-                    <p class="desc">大屏彩显，可刷公交，门禁</p>
-                    <p class="price">209元 <del>229元</del></p>
-                </div>
-                <div class="items">
-                    <img src="images/pms_1560238127.40319869.png" alt="" class="flash-img">
-                    <p class="name">小米手环4 NFC版 黑色</p>
-                    <p class="desc">大屏彩显，可刷公交，门禁</p>
-                    <p class="price">209元 <del>229元</del></p>
-                </div>
-                <div class="items">
-                    <img src="images/pms_1560238127.40319869.png" alt="" class="flash-img">
-                    <p class="name">小米手环4 NFC版 黑色</p>
-                    <p class="desc">大屏彩显，可刷公交，门禁</p>
-                    <p class="price">209元 <del>229元</del></p>
+                <div class="home-banner-box">
+                    <a href="#">
+                        <img src="images/41d16e66381cfeda7b6b39ab67678d5e.jpg">
+                    </a>
                 </div>
             </div>
 
