@@ -68,6 +68,7 @@
             left: 50%;
             margin-left: -62px;
             transition: all .3s;
+            z-index: 1000;
         }
 
 
@@ -764,6 +765,141 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+        }
+
+        .footer1 {
+            width: 100%;
+            height: 272px;
+            background-color: #fff;
+        }
+
+        .footer-service {
+            height: 25px;
+            line-height: 25px;
+            padding: 27px 0;
+            background-color: #fff;
+        }
+
+        .footer-service li {
+            float: left;
+            width: 19.8%;
+            border-right: 1px solid #e0e0e0;
+        }
+
+        .footer-service li:last-child {
+            border-right: none;
+        }
+
+        .footer-service a {
+            color: #616161;
+            transition: all .2s;
+        }
+
+        .footer-service i {
+            font-size: 24px;
+            margin-right: 6px;
+        }
+
+        .footer-service a:hover {
+            color: #ff6700;
+        }
+
+        .footer-links {
+            height: 112px;
+            padding: 40px 0;
+        }
+
+        .footer-links>ul {
+            float: left;
+            width: 160px;
+            text-align: left;
+        }
+
+        .footer-links li {
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+        .footer-links li:first-child {
+            font-size: 14px;
+            margin: -1px 0 26px;
+            color: #424242;
+        }
+
+        .footer-links li>a {
+            color: #757575;
+        }
+
+        .footer-links li>a:hover {
+            color: #ff6700;
+        }
+
+        .tel {
+            color: red;
+            font-size: 25px;
+        }
+
+        .week {
+            font-size: 12px;
+            color: #616161;
+            margin-bottom: 15px;
+            /* height: 36px; */
+        }
+
+        .kefu {
+            display: inline-block;
+            width: 118px;
+            height: 28px;
+            line-height: 28px;
+            border: 1px solid #ff6700;
+            margin: 0 auto;
+            font-size: 12px;
+            color: #ff6700;
+        }
+
+        .kefu:hover {
+            background-color: #ff6700;
+            color: #fff;
+        }
+
+        .footer2 {
+            width: 100%;
+            height: 172px;
+            background-color: #fafafa;
+            padding: 30px 0;
+            font-size: 12px;
+            color: #757575;
+        }
+
+        .logo-footer {
+            float: left;
+            width: 57px;
+            height: 57px;
+            margin-right: 10px;
+        }
+
+        .info {
+            width: 1159px;
+            float: left;
+            text-align: left;
+        }
+
+        .p1 {
+            height: 19px;
+            line-height: 19px;
+        }
+
+        .p2 {
+            line-height: 18px;
+        }
+
+        .p3 {
+            margin-top: 4px;
+        }
+
+        .p3>img {
+            height: 28px;
+            margin-bottom: 15px;
         }
     </style>
 </head>
@@ -1602,12 +1738,98 @@
                         </a>
                     </div>
                 </div>
-
             </div>
 
         </div>
     </div>
 
+    <div class="footer1">
+        <div class="wrap">
+            <div class="footer-service">
+                <ul>
+                    <li><a href="#"><i class="iconfont">&#xe629;</i><span>预约维修服务</span></a></a></li>
+                    <li><a href="#"><i class="iconfont">&#xe629;</i><span>预约维修服务</span></a></a></li>
+                    <li><a href="#"><i class="iconfont">&#xe629;</i><span>预约维修服务</span></a></a></li>
+                    <li><a href="#"><i class="iconfont">&#xe629;</i><span>预约维修服务</span></a></a></li>
+                    <li><a href="#"><i class="iconfont">&#xe629;</i><span>预约维修服务</span></a></a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li>帮助中心</li>
+                    <li><a href="#">账户管理</a></li>
+                    <li><a href="#">账户管理</a></li>
+                    <li><a href="#">账户管理</a></li>
+                </ul>
+                <ul>
+                    <li>帮助中心</li>
+                    <li><a href="#">账户管理</a></li>
+                    <li><a href="#">账户管理</a></li>
+                    <li><a href="#">账户管理</a></li>
+                </ul>
+                <ul>
+                    <li>帮助中心</li>
+                    <li><a href="#">账户管理</a></li>
+                    <li><a href="#">账户管理</a></li>
+                    <li><a href="#">账户管理</a></li>
+                </ul>
+                <ul>
+                    <li>帮助中心</li>
+                    <li><a href="#">账户管理</a></li>
+                    <li><a href="#">账户管理</a></li>
+                    <li><a href="#">账户管理</a></li>
+                </ul>
+                <ul>
+                    <li>帮助中心</li>
+                    <li><a href="#">账户管理</a></li>
+                    <li><a href="#">账户管理</a></li>
+                    <li><a href="#">账户管理</a></li>
+                </ul>
+                <ul>
+                    <li>帮助中心</li>
+                    <li><a href="#">账户管理</a></li>
+                    <li><a href="#">账户管理</a></li>
+                    <li><a href="#">账户管理</a></li>
+                </ul>
+                <div class="contact">
+                    <p class="tel">400-100-5678</p>
+                    <p class="week">周一至周日 8:00-18:00
+                        <br>
+                        （仅收市话费）
+                    </p>
+                    <a href="#" class="kefu">
+                        <i class="iconfont">&#xe710;</i>
+                        人工客服
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer2">
+        <div class="wrap">
+            <img src="images/logo-footer.png" alt="" class="logo-footer">
+            <div class="info">
+                <p class="p1">
+                    小米商城 | MIUI | 米家 | 米聊 | 多看 | 游戏 | 政企服务 | 小米天猫店 | 小米集团隐私政策 | 小米公司儿童信息保护规则 | 小米商城隐私政策 | 小米商城用户协议 |
+                    问题反馈 | 廉正举报 | 诚信合规 | Select Location
+                </p>
+                <p class="p2">
+                    © mi.com 京ICP证110507号 京ICP备10046444号 京公网安备11010802020134号 京网文[2020]0276-042号 <br>
+                    （京）网械平台备字（2018）第00005号 互联网药品信息服务资格证 (京)-非经营性-2014-0090 营业执照 医疗器械质量公告 <br>
+                    增值电信业务许可证 网络食品经营备案（京）【2018】WLSPJYBAHF-12 食品经营许可证 <br>
+                    违法和不良信息举报电话：185-0130-1238 知识产权侵权投诉 本网站所列数据，除特殊说明，所有数据均出自我司实验室测试
+                </p>
+                <p class="p3">
+                    <img src="images/truste.png" alt="">
+                    <img src="images/truste.png" alt="">
+                    <img src="images/truste.png" alt="">
+                    <img src="images/truste.png" alt="">
+                </p>
+            </div>
+        </div>
+    </div>
 
 </body>
 
