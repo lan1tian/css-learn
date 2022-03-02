@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素</title>
+    <style>
+        .box {
+            width: 180px;
+            position: relative;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        span {
+            width: 60px;
+            height: 30px;
+            font-size: 14px;
+            line-height: 30px;
+            position: relative;
+            float: left;
+            text-align: center;
+            box-sizing: border-box;
+            /* background: #665e57; */
+            
+        }
+
+        .row::before,
+        .col::after {
+            content: "";
+            background-color: #665e57;
+            display: block;
+            position: absolute;
+        }
+
+        .row::before {
+            width: 30px;
+            height: 1px;
+            bottom: 0;
+            left: 15px;
+        }
+
+        .col::after {
+            width: 1px;
+            height: 20px;
+            right: 0;
+            top: 6px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <span class="row col">详情</span>
+        <span class="row col">详情</span>
+        <span class="row">详情</span>
+        <span class="col">详情</span>
+        <span class="col">详情</span>
+        <span>详情</span>
+    </div>
+</body>
+
+</html>
